@@ -38,9 +38,12 @@ public class DetectCollisions : MonoBehaviour
             //sin el if funcionaría con cualquier colision.
             //ambos tienen collider. El projectile tiene RigidBody
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
 
-            //Destroy(gameObject);
+            //Se desactiva para Object Pooler
+            gameObject.SetActive(false);
+
+            //Destroy(gameObject); //Ahora es con vidas.
             GetComponent<AnimalHunger>().FeedAnimal(1);
 
         }

@@ -14,13 +14,14 @@ public class DestroyOutOfBounds : MonoBehaviour
         
     void Update()
     {
-        if (transform.position.z > topBound)
-        {
-            Destroy(gameObject);
-            //QuePasoConLasVidas?.Invoke(); //si es con argumento lo pasas en los parentesis
-        }
+        //Lo pasé a PizzaOutBounds para usar el ObjectPooler
+        //if (transform.position.z > topBound)
+        //{
+        //    Destroy(gameObject);
+        //    //QuePasoConLasVidas?.Invoke(); //si es con argumento lo pasas en los parentesis
+        //}
 
-        else if (transform.position.z < lowerBound)
+        if (transform.position.z < lowerBound)
         {
             Destroy(gameObject);
             QuePasoConLasVidas?.Invoke();
